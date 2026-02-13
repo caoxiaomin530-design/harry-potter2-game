@@ -207,7 +207,10 @@
         <div class="card">
             <div id="feedback" class="feedback-toast">Correct!</div>
             
-            <div id="area-word" class="word-text">Word</div>
+           <div style="display:flex; align-items:center; justify-content:center; gap:10px;">
+                <div id="area-word" class="word-text">Word</div>
+                <button onclick="speakCurrentWord()" style="background:none; border:none; font-size:1.5rem; cursor:pointer;">🔊</button>
+           </div>
             <div id="area-meaning" class="meaning-text">Meaning</div>
 
             <div id="area-mic" class="mic-container hidden">
