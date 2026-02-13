@@ -523,7 +523,12 @@
     function exitToMenu() { UI.game.classList.add('hidden'); renderMenu(); }
     function resetProgress() { if(confirm("重置进度？")) { localStorage.clear(); renderMenu(); } }
     UI.inputSpell.addEventListener('keyup', (e) => { if(e.key === 'Enter') checkSpelling(); });
-
+    // 手动播放当前单词
+    function speakCurrentWord() {
+        if (Game.currentWords && Game.currentWords[Game.wordIndex]) {
+            speak(Game.currentWords[Game.wordIndex].word);
+    }
+}
 </script>
 </body>
 </html>
